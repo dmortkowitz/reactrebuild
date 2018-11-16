@@ -1,6 +1,6 @@
 import React from 'react';
 import MainToolbar from './MainToolbar';
-// import MainCarousel from "./MainCarousel";
+import MainCarousel from "./MainCarousel";
 
 
 function Mainpage(){
@@ -13,6 +13,8 @@ function Mainpage(){
     <div>
       <div style={mainLayout}>
         <MainToolbar />
+        <MainCarousel />
+        
       </div>
     </div>
   );
