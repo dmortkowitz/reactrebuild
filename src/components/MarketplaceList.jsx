@@ -2,7 +2,8 @@ import React from 'react';
 import Marketplace from './Marketplace';
 
 
-var masterMarketplaceList = [
+
+const masterMarketplaceList = [
   {
     author: 'Haruki Murakami',
     title: 'Norwegian Wood',
@@ -25,9 +26,9 @@ function MarketplaceList(){
     <div>
       <hr/>
       {masterMarketplaceList.map((book, index) =>
-        <Marketplace names={book.author}
-          location={book.title}
-          issue={book.description}
+        <Marketplace author={book.author}
+          title={book.title}
+          description={book.description}
           key={index}/>
       )}
     </div>
