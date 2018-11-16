@@ -1,14 +1,18 @@
 import React from 'react';
+import MainToolbar from './MainToolbar';
 // import MainCarousel from "./MainCarousel";
 
 
 function Mainpage(){
-  var styles = {
+  var mainLayout = {
+    width: '80%',
+    
+    
   };
   return (
     <div>
-      <div style={styles}>
-      <h1>Testing Mainpage.</h1>
+      <div style={mainLayout}>
+        <MainToolbar />
       </div>
     </div>
   );
