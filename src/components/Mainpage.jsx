@@ -6,10 +6,11 @@ function Mainpage(){
   var styles = {
   };
   return (
-    <div style={styles}>
-    
+    <div>
+      <div style={styles}>
+      <h1>Testing Mainpage.</h1>
+      </div>
     </div>
-
   );
 }
 
