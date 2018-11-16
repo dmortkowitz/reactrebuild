@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Marketplace(props){
   return (
     <div>
-      <style global jsx>{`
+      <style>{`
         div {
     
         }
@@ -14,12 +14,13 @@ function Marketplace(props){
       <hr/>
     </div>
   );
-}
 
-Marketplace.propTypes = {
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string
-};
+
+  Marketplace.propTypes = {
+    author: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string
+  };
+}
 
 export default Marketplace;
