@@ -36,9 +36,9 @@ function MainToolbar(){
           <a href="#" >Gift Cards &nbsp;&nbsp;</a>
           <a href="#" >Stores & Events &nbsp;&nbsp;</a>
           <a href="#" >Help &nbsp;&nbsp;</a> 
+        </div>
       </div>
     </div>
-  </div>
 
   );
 }

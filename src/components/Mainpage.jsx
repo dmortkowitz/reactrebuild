@@ -1,11 +1,12 @@
 import React from 'react';
 import MainToolbar from './MainToolbar';
-import MainCarousel from "./MainCarousel";
+import MainCarousel from './MainCarousel';
+import MainLogobar from './MainLogobar';
 
 
 function Mainpage(){
   var mainLayout = {
-    width: '80%',
+    width: '100%',
     
     
   };
@@ -13,6 +14,7 @@ function Mainpage(){
     <div>
       <div style={mainLayout}>
         <MainToolbar />
+        <MainLogobar />
         <MainCarousel />
         
       </div>

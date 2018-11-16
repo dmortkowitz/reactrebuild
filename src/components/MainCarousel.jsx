@@ -6,17 +6,15 @@ function MainCarousel(){
   var caroLayout = {
     width: '80%',
     float: 'center',
-    
-    image: {
-      width: '900px',
+    marginLeft: '10%',
     }
     
-  };
+
   return (
     <div>
       <div style={caroLayout}>
-      
-          <image src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2018/11/14/Homepage_Billboard_11-14_A1.jpg" height="600px" />
+        <img src='https://dispatch.barnesandnoble.com//content/dam/ccr/brooksbell/2018/hgg/PROD-13764_HGG_text_Desktop.png' width='100%' />
+        <img src='https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2018/11/14/Homepage_Billboard_11-14_A1.jpg' width='100%'/>
       </div>
     </div>
   );
