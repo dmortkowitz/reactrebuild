@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Marketplace(props){
   return (
     <div>
-      <style>{`
+      <style jsx>{`
         div {
-    
+          background-color: white;
         }
       `}</style>
       <h3>{props.author} - {props.title}</h3>
@@ -14,13 +14,14 @@ function Marketplace(props){
       <hr/>
     </div>
   );
-
-
-  Marketplace.propTypes = {
-    author: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string
-  };
 }
+
+
+Marketplace.propTypes = {
+  author: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string
+};
+
 
 export default Marketplace;

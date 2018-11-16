@@ -35,7 +35,8 @@ module.exports = {
             "react",
           ],
           plugins: [
-            "react-hot-loader/babel"
+            "react-hot-loader/babel",
+            "styled-jsx/babel"
           ]
         }
       },
@@ -47,7 +48,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'social-media-clone',
+      title: 'react-ind-proj',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]
