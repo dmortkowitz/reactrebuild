@@ -4,6 +4,7 @@
 _by David Mortkowitz_
 
 > This application recreates a previous Angular project for Epicodus's React Week 1 curriculum. I have chosen to mimic BarnesandNoble.com.
+> The Marketplace has a list of books available for sale. 
 
 # Application specifications and behavior expectations
 
@@ -30,6 +31,11 @@ _by David Mortkowitz_
 > webpack-dev-serve
 
 * to launch the test server at localhost:8080 to run the site and test its functionality.
+
+## Known Issues
+
+* Currently the Navbar is simply clickable hyperlinks, instead of dropdown-on-hover. This will be amended in a future update. 
+* Currently the Search bar is simply a text input with no ability to search. 
 
 
 ## Technologies used
