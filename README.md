@@ -10,17 +10,17 @@ _by David Mortkowitz_
 * User should be able to navigate the front page of a mock BN.com layout.
 * Multiple components used, separating logic out into its most basic parts, described in image below: 
 
-![alt site-sketch](./ReactIndDiagram.xml)
+![alt site-sketch](./ReactIndDiagram.jpeg)
 
 
 ## Installation and Usage
 
 * Please have Node installed
 * Please refer to the the program.json file located here:
-*   
 
+> https://github.com/dmortkowitz/reactrebuild/blob/master/package.json
 
-* After downloading the repository (located at:  ), navigate to project folder in Terminal (or your command line of choice) and run the command:
+* After downloading the repository (located at: https://github.com/dmortkowitz/reactrebuild.git ), navigate to project folder in Terminal (or your command line of choice) and run the command:
 
 > npm install
 
@@ -39,5 +39,7 @@ _by David Mortkowitz_
 * React
 
 ## Github
+
+https://github.com/dmortkowitz/reactrebuild.git
 
 
