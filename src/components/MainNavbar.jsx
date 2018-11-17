@@ -1,41 +1,49 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-function MainToolbar(){
+
+function MainNavbar(){
   var toolbarLeft = {
     width: '40%',
-    height: '20px',
+    height: '30px',
     paddingTop: '5px',
     backgroundColor: '#c9dbe2',
     fontSize: '12px',
     float: 'left',
     marginLeft: '10%',
-    a: '#373d42',
+
   };
   var toolbarRight = {
     width: '40%',
-    height: '20px',
+    height: '30px',
     paddingTop: '5px',
     backgroundColor: '#c9dbe2',
     fontSize: '12px',
     float: 'right',
     marginRight: '10%',
-    textAlign: 'right',
-    a: '#373d42',
+    textAlign: 'center',
+
   };
   
   return (
     <div>
       <div>
         <div style={toolbarLeft}>
-          <a href="#" >Shop the Holiday Gift Guide</a>
+          <a href="#" >Best Sellers</a>
+          <a href="#" >NOOK Books</a>
+          <a href="#" >NOOK</a>
+          <a href="#" >Textbooks</a>
+          <a href="#" >Newsstand</a>
+          <a href="#" >Teens</a>
+          <a href="#" >Kids</a>
+          <a href="#" >Toys & Games</a>
+          <a href="#" >Music</a>
+          
         </div>
       </div>
       <div>
         <div style={toolbarRight}>
-          <a href="#" >Membership &nbsp;&nbsp;</a>
-          <a href="#" >Gift Cards &nbsp;&nbsp;</a>
-          <a href="#" >Stores & Events &nbsp;&nbsp;</a>
-          <a href="#" >Help &nbsp;&nbsp;</a> 
+          <Link to='/marketplacelist'>Marketplace</Link>
         </div>
       </div>
     </div>
@@ -43,4 +51,4 @@ function MainToolbar(){
   );
 }
 
-export default MainToolbar;
+export default MainNavbar;

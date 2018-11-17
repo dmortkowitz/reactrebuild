@@ -2,6 +2,7 @@ import React from 'react';
 import MainToolbar from './MainToolbar';
 import MainCarousel from './MainCarousel';
 import MainLogobar from './MainLogobar';
+import MainNavbar from './MainNavbar';
 
 
 function Mainpage(){
@@ -15,6 +16,7 @@ function Mainpage(){
       <div style={mainLayout}>
         <MainToolbar />
         <MainLogobar />
+        <MainNavbar />
         <MainCarousel />
         
       </div>
