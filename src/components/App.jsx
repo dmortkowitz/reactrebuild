@@ -4,7 +4,8 @@ import MarketplaceList from './MarketplaceList';
 import { Switch, Route } from 'react-router-dom';
 import NewBookForm from './NewBookForm';
 
-
+// <Mainpage />
+// <MarketplaceList />
 // function App(){
 //   return (
 //     <div>
@@ -21,8 +22,10 @@ import NewBookForm from './NewBookForm';
 function App(){
   return (
     <div>
-      <Mainpage />
-      <MarketplaceList />
+      <Switch> 
+      <Route exact path='/' component={Mainpage} />
+      <Route exact path='/marketplacelist' component={MarketplaceList} />
+      </Switch>
     </div>
   );
 }
