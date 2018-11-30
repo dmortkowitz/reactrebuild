@@ -4,7 +4,6 @@ import MainCarousel from './MainCarousel';
 import MainLogobar from './MainLogobar';
 import MainNavbar from './MainNavbar';
 
-
 function Mainpage(){
   var mainLayout = {
     width: '100%',

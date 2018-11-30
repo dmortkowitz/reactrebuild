@@ -1,9 +1,8 @@
 import React from 'react';
+import MainNavBar from './MainNavBar';
 import Mainpage from './Mainpage';
 import NewBookList from './NewBookList';
-import MainNavBar from './MainNavBar';
 import NewBookControl from './NewBookControl';
-import NewBookForm from './NewBookForm';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
@@ -34,7 +33,7 @@ class App extends React.Component {
   }
 
   updateBookElapsedWaitTime() {
-    var newMasterBookList = Object.assign({}, this.state.masterBookList); Object.keys(newMasterBookList).forEach(newBookId => { newMasterBookList[newBookId].formattedWaitTime = (newMasterBookList[newBookId].timeOpen).fromNow(true);
+    var newMasterBookList = Object.assign({}, this.state.masterBookList); Object.keys(newMasterBookList).forEach(bookId => { newMasterBookList[bookId].formattedWaitTime = (newMasterBookList[bookId].timeOpen).fromNow(true);
     });
     this.setState({masterBookList: newMasterBookList});
   }
@@ -48,19 +47,18 @@ class App extends React.Component {
     this.setState({masterBookList: newMasterBookList});
   }
   
-  handleChangingSelectedBook(NewBookId){
-    this.setState({selectedBook: newBookId});
+  handleChangingSelectedBook(bookId){
+    this.setState({selectedBook: bookId});
   }
 
   render(){
     console.log(this.state.masterBookList);
     return (
       <div>
-        <MainNavBar/>
+        <Header/>
         <Switch>
-          <Route exact path='/' component={Mainpage} />
-          <Route exact path='/marketplace' render={()=><NewBookList bookList={this.state.masterBookList} />} />
-          <Route path='/newbook' render={()=><NewBookControl onNewBookCreation={this.handleAddingNewBookToList} />} />
+          <Route exact path='/' render={()=><BookList bookList={this.state.masterBookList} />} />
+          <Route path='/marketplace' render={()=><NewBookControl onNewBookCreation={this.handleAddingNewBookToList} />} />
           <Route path='/listingmanager' render={(props)=><ListingManager bookList={this.state.masterBookList} currentRouterPath={props.location.pathname} onBookSelection={this.handleChangingSelectedBook}selectedBook={this.state.selectedBook}/>} />        
           <Route component={Error404} />
         </Switch>
