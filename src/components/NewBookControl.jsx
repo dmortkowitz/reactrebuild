@@ -1,7 +1,7 @@
 import React from 'react';
-import ConfirmationQuestions from './ConfirmationQuestions';
+import QualityCheck from './QualityCheck';
 import NewBookForm from './NewBookForm';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class NewBookControl extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class NewBookControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-  this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
   }
 
   handleTroubleshootingConfirmation(){
@@ -21,7 +21,7 @@ class NewBookControl extends React.Component {
     if (this.state.formVisibleOnPage){
       currentlyVisibleContent = <NewBookForm onNewBookCreation={this.props.onNewBookCreation}/>;
     } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />;
+      currentlyVisibleContent = <QualityCheck onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation} />;
     }
     return (
       <div>

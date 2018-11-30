@@ -9,7 +9,7 @@ function MainLogobar(){
     float: 'center',
     marginLeft: '10%',
     
-    }
+  };
     
 
   return (

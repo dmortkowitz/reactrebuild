@@ -1,7 +1,10 @@
 import React from 'react';
+import Mainpage from './Mainpage';
+import MarketplaceList from './MarketplaceList';
 import MainNavBar from './MainNavBar';
 import NewBookList from './NewBookList';
 import NewBookControl from './NewBookControl';
+import NewBookForm from './NewBookForm';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import Moment from 'moment';
@@ -11,14 +14,14 @@ import { v4 } from 'uuid';
 class App extends React.Component {
 
   constructor(props) {
-  super(props);
-  this.state = {
-    masterBookList: {},
-    selectedBook: null
-  };
-  this.handleAddingNewBookToList = this.handleAddingNewBookToList.bind(this);
-  this.handleChangingSelectedBook = this.handleChangingSelectedBook.bind(this);
-}
+    super(props);
+    this.state = {
+      masterBookList: {},
+      selectedBook: null
+    };
+    this.handleAddingNewBookToList = this.handleAddingNewBookToList.bind(this);
+    this.handleChangingSelectedBook = this.handleChangingSelectedBook.bind(this);
+  }
 
   componentDidMount() {
     this.waitTimeUpdateTimer = setInterval(() =>
@@ -32,9 +35,9 @@ class App extends React.Component {
   }
 
   updateBookElapsedWaitTime() {
-  var newMasterBookList = Object.assign({}, this.state.masterBookList); Object.keys(newMasterBookList).forEach(bookId => { newMasterBookList[bookId].formattedWaitTime = (newMasterBookList[bookId].timeOpen).fromNow(true);
-  });
-  this.setState({masterBookList: newMasterBookList});
+    var newMasterBookList = Object.assign({}, this.state.masterBookList); Object.keys(newMasterBookList).forEach(newBookId => { newMasterBookList[newBookId].formattedWaitTime = (newMasterBookList[newBookId].timeOpen).fromNow(true);
+    });
+    this.setState({masterBookList: newMasterBookList});
   }
 
   handleAddingNewBookToList(newBook){
@@ -46,12 +49,12 @@ class App extends React.Component {
     this.setState({masterBookList: newMasterBookList});
   }
   
-  handleChangingSelectedBook(BookId){
-    this.setState({selectedBook: bookId});
+  handleChangingSelectedBook(NewBookId){
+    this.setState({selectedBook: newBookId});
   }
 
   render(){
-  console.log(this.state.masterBookList);
+    console.log(this.state.masterBookList);
     return (
       <div>
         <MainNavBar/>

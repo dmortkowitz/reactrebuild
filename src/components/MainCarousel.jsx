@@ -7,7 +7,7 @@ function MainCarousel(){
     width: '80%',
     float: 'center',
     marginLeft: '10%',
-    }
+  };
     
 
   return (

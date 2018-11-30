@@ -23,8 +23,8 @@ function ListingManager(props){
 ListingManager.propTypes = {
   newBookList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
-  onTicketSelection: PropTypes.func.isRequired,
+  onBookSelection: PropTypes.func.isRequired,
   selectedBook: PropTypes.object
 };
 
-export default Admin;
+export default ListingManager;
