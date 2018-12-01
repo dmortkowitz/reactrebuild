@@ -1,12 +1,13 @@
 import React from 'react';
+import MainToolbar from './MainToolbar';
+import MainLogobar from './MainLogobar';
+import MainNavbar from './MainNavbar';
+import MainCarousel from './MainCarousel';
 import NewBookList from './NewBookList';
 import NewBookControl from './NewBookControl';
-import Mainpage from './Mainpage';
-import Marketplace from './Marketplace';
+import ListingManager from './ListingManager';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
-import Moment from 'moment';
-import ListingManager from './ListingManager';
 import { v4 } from 'uuid';
 
 class App extends React.Component {
@@ -52,7 +53,6 @@ class App extends React.Component {
   }
 
   render(){
-    console.log(this.state.masterTicketList);
     return (
       <div>
         <MainToolbar />
@@ -60,9 +60,9 @@ class App extends React.Component {
         <MainNavbar />
         <MainCarousel />
         <Switch>
-          <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList} />} />
-          <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
-          <Route path='/admin' render={(props)=><Admin ticketList={this.state.masterTicketList} currentRouterPath={props.location.pathname} onTicketSelection={this.handleChangingSelectedTicket}selectedTicket={this.state.selectedTicket}/>} />
+          <Route exact path='/' render={()=><NewBookList newBookList={this.state.masterBookList} />} />
+          <Route path='/newbook' render={()=><NewBookControl onNewBookCreation={this.handleAddingNewBookToList} />} />
+          <Route path='/listingmanager' render={(props)=><ListingManager newBookList={this.state.masterBookList} currentRouterPath={props.location.pathname} onTicketSelection={this.handleChangingSelectedTicket}selectedTicket={this.state.selectedTicket}/>} />
           <Route component={Error404} />
         </Switch>
       </div>

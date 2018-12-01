@@ -9,12 +9,12 @@ function NewBookList(props){
       {Object.keys(props.newBookList).map(function(newBookId) {
         var newBook = props.newBookList[newBookId];
         return <NewBook author={newBook.author}
-        title={newBook.title}
-        description={newBook.description}
-        formattedWaitTime={newBook.formattedWaitTime}
-        currentRouterPath={props.currentRouterPath}
-        key={newBook.id}
-        onNewBookSelection={props.onNewBookSelection}/>;
+          title={newBook.title}
+          description={newBook.description}
+          formattedWaitTime={newBook.formattedWaitTime}
+          currentRouterPath={props.currentRouterPath}
+          key={newBook.id}
+          onNewBookSelection={props.onNewBookSelection}/>;
       })}
     </div>
   );

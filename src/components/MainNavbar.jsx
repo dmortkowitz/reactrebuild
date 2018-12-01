@@ -24,7 +24,7 @@ function MainNavbar(){
     textAlign: 'center',
 
   };
-  
+
   return (
     <div>
       <div>
@@ -38,12 +38,12 @@ function MainNavbar(){
           <a href="#" >Kids</a>
           <a href="#" >Toys & Games</a>
           <a href="#" >Music</a>
-          
+
         </div>
       </div>
       <div>
         <div style={toolbarRight}>
-          <Link to='/marketplacelist'>Marketplace</Link>
+          <Link to='/marketplace'>Marketplace</Link>
         </div>
       </div>
     </div>
