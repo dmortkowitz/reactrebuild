@@ -8,12 +8,12 @@ function NewBook(props){
       <h4>{props.formattedWaitTime}</h4>
       <hr/>
     </div>;
-    if (props.currentRouterPath === '/ListingManager'){
-      return (
-        <div onClick={() => {props.onBookSelection(props.newBookId);}}>
-          {newBookInformation}
-        </div>
-      );
+  if (props.currentRouterPath === '/listingmanager'){
+    return (
+      <div onClick={() => {props.onBookSelection(props.newBookId);}}>
+        {newBookInformation}
+      </div>
+    );
   } else {
     return (
       <div>

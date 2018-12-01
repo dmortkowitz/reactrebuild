@@ -1,29 +1,30 @@
 import React from 'react';
-import Marketplace from './Marketplace';
+import NewBook from './NewBook';
 import PropTypes from 'prop-types';
 
 function NewBookList(props){
   return (
     <div>
       <hr/>
-      {Object.keys(props.newBookList).map(function(bookId) {
-        var book = props.bookList[bookId];
-        return <Marketplace author={book.author}
-        title={book.title}
-        description={book.description}
-        formattedWaitTime={book.formattedWaitTime}
+      {Object.keys(props.newBookList).map(function(newBookId) {
+        var newBook = props.newBookList[newBookId];
+        return <NewBook author={newBook.author}
+        title={newBook.title}
+        description={newBook.description}
+        formattedWaitTime={newBook.formattedWaitTime}
         currentRouterPath={props.currentRouterPath}
-        key={bookId}
-        bookId={bookId}
+        key={newBook.id}
+        onNewBookSelection={props.onNewBookSelection}/>;
       })}
     </div>
   );
 }
 
+
 NewBookList.propTypes = {
-  bookList: PropTypes.object,
+  newBookList: PropTypes.object,
   currentRouterPath: PropTypes.string,
-  onBookSelection: PropTypes.func
+  onNewBookSelection: PropTypes.func
 };
 
 export default NewBookList;
