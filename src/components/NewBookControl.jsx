@@ -2,6 +2,7 @@ import React from 'react';
 import QualityCheck from './QualityCheck';
 import NewBookForm from './NewBookForm';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class NewBookControl extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class NewBookControl extends React.Component {
     return (
       <div>
         {currentlyVisibleContent}
+        <Link to="/">home</Link>
       </div>
     );
   }

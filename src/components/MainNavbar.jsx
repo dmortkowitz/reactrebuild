@@ -43,7 +43,7 @@ function MainNavbar(){
       </div>
       <div>
         <div style={toolbarRight}>
-          <Link to='/marketplace'>Marketplace</Link>
+          <Link to='/newbook'>Marketplace</Link>
         </div>
       </div>
     </div>
